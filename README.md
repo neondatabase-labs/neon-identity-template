@@ -1,36 +1,64 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Neon Identity Template App
 
-## Getting Started
+This is a [Next.js](https://nextjs.org) project using the App Router that servers as template for the [Neon Identity](https://neon.tech/docs/guides/neon-identity) integration with [Stack Auth](https://docs.stack-auth.com/overview).
 
-First, run the development server:
+## Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- Next.js with the App Router, TypeScript and Tailwind CSS
+- User authentication powered by Stack Auth
+- Integration with Neon Identity
+- Ready-to-deploy configuration for Vercel, Netlify, and Render
+
+## Prerequisites
+
+- [Neon](https://neon.tech) account
+- Node.js 18+ installed locally
+
+## Local Development Setup
+
+### 1. Set up Neon Identity
+
+1. Create a new Neon project or use an existing one
+2. Navigate into Neon Identity
+3. Click "Connect" and go through the OAuth flow until your Neon Identity integration is set
+
+### 2. Run the development server
+
+1. Install dependencies:
+
+   ```bash
+   npm install
+   ```
+
+2. Create `.env.local` file and copy the variables from the Neon Identity dashboard:
+
+   ```
+   # Stack Auth
+   NEXT_PUBLIC_STACK_PROJECT_ID=
+   NEXT_PUBLIC_STACK_PUBLISHABLE_CLIENT_KEY=
+   STACK_SECRET_SERVER_KEY=
+
+   # Database connections
+   DATABASE_URL=              # neondb_owner role connection
+   ```
+
+3. Run the development server:
+
+   ```bash
+   npm run dev
+   ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
 ## Learn More
 
-To learn more about Next.js, take a look at the following resources:
+- [Neon Identity Documentation](https://neon.tech/docs/guides/neon-identity)
+- [Stack Auth Documentation](https://docs.stack-auth.com/)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Authors
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- [Pedro Figueiredo](https://github.com/pffigueiredo)
 
-## Deploy on Vercel
+## Contributing
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Contributions are welcome! Please feel free to submit a Pull Request.
